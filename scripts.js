@@ -1,4 +1,5 @@
-const food = document.getElementById('frying');
+const food = document.getElementById('food');
+const pan = document.getElementById('pan');
 
 function jump() {
     if (food.classList != "jump") {
