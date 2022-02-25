@@ -31,12 +31,15 @@ let isCooking = setInterval(function () {
     } else if (panLeft < -20) {
         score = score + 1;
         console.log(score);
+        document.getElementById('scoreboard').innerHTML = score;
     }
 }, 10);
 
 let randomFunc = setInterval(function () {
     max = 1500
     min = 580
+    // random setting of pan off the right of the screen allows for it to move at different speeds trying to complete journey in 2 secs
+
     let randomNumber = Math.floor(Math.random() *(max-min))+min;
     console.log(randomNumber);
     pan.style.setProperty("--start_length",`${randomNumber}px`);
